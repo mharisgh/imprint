@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .title {
+      @apply capitalize font-semibold text-[3rem] tracking-tighter;
+    }
+    .subtitle{
+      @apply text-[0.8rem] font-medium;
+    }
+    .accent{
+      @apply bg-[#DAFF8C];
+    }
+}

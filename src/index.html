@@ -7,67 +7,255 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
 </head>
 
-<body>
-  <!-- Header -->
-  <header>
-    <nav class="
-             flex flex-wrap
-             items-center
-             justify-between
-             w-full
-             py-4
-             md:py-0
-             px-4
-             text-lg text-gray-700
-             bg-white
-           ">
-      <div>
-        <a href="#">
-          <img src="../assets/logo-dark.svg" alt="">
-        </a>
-      </div>
+<body class="text-[12px] font-['Poppins'] leading-[0.9] ">
 
-      <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block"
-        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-
-      <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
-        <ul class="
-                 pt-4
-                 text-base text-gray-700
-                 md:flex
-                 md:justify-between 
-                 md:pt-0">
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Features</a>
-          </li>
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Pricing</a>
-          </li>
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Customers</a>
-          </li>
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Blog</a>
-          </li>
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400 text-purple-500" href="#">Sign Up</a>
-          </li>
+  <div class="container max-w-screen-lg mx-auto ">
+    <!-- Header -->
+    <header>
+      <nav class="flex justify-between items-center py-6">
+        <a href="#home"><img class="w-[100px]" src="../assets/logo-dark.svg" alt=""></a>
+        <ul class="md:flex gap-8 hidden">
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+          <li>Technology</li>
         </ul>
+        <button
+          class="bg-black text-white flex justify-center items-center rounded-full w-[140px] h-[32px] text-[12px]">Contact
+          Us</button>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main class="relative">
+
+      <!-- animation icons -->
+      <div class="absolute w-full h-full ">
+        <img class="hero-icons opacity-0 absolute right-10 top-[30%] h-[38px] w-[38px]" src="/assets/graph.png" alt="">
+        <img class="hero-icons opacity-0 absolute right-[10%] top-[35%] h-[30px] w-[30px]" src="/assets/msg.png" alt="">
+        <img class="hero-icons opacity-0 absolute left-[5%] top-[25%] h-[30px] w-[30px]" src="/assets/star.png" alt="">
+        <img class="hero-icons opacity-0 absolute left-[10%] top-[10%] h-[30px] w-[30px]" src="/assets/transform.png"
+          alt="">
       </div>
-      
-    </nav>
-  </header>
-  <!-- Hero -->
-  <!-- Features -->
-  <!-- Services -->
-  <!-- About -->
-  <!-- Testimonials -->
-  <!-- Footer -->
+
+      <!-- main title -->
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="hero-up mt-8 title text-center max-w-[500px]">Your trusted
+          printing
+          Partner
+          in UAE</h1>
+        <p class="hero-up max-w-[400px] subtitle text-center leading-5 text-gray-500 mt-6">We offers various printing
+          services
+          using
+          advanced equipment and techniques to produce high-quality prints for commercial and individual needs.</p>
+      </div>
+
+      <!-- 5 cards -->
+      <div
+        class="hero-up opacity-0 transform translate-y-10 relative flex flex-col md:flex-row  w-full h-[380px]  justify-center items-end gap-6 ">
+
+        <!-- buttons -->
+        <div class="absolute flex top-[4rem] gap-2">
+          <button
+            class="btn-shadow bg-[#daff8c] text-[.8rem] rounded-full h-[46px] flex justify-center items-center w-[200px] hover:bg-black hover:text-white transition-all  font-medium">Our
+            Services
+          </button>
+          <button
+            class="btn-shadow bg-[#dededf] hover:bg-black hover:text-white transition-all  rounded-full text-[.8rem] h-[46px] flex justify-center items-center w-[200px] font-medium">Get
+            a
+            Quote
+          </button>
+        </div>
+
+        <!-- left 2nd box  -->
+        <div class="relative">
+
+          <div class="absolute  w-[214px]  bottom-10 overflow-hidden">
+
+            <div class="mission-box  flex w-[428px]">
+
+              <div class=" w-1/2 p-4">
+                <img class="card-arrow w-[80px] mb-[28px]" src="../assets/arrow-right.svg" alt="">
+                <p class=" leading-5 text-[#004637] font-medium text-[0.8rem]">Innovation, Sustainability, Empowering
+                  Excellence.</p>
+              </div>
+              <div class=" w-1/2 p-4">
+                <p class=" leading-6 text-[#004637]  text-[0.8rem]">Our mission is embracing innovation, promote
+                  sustainability, empowering excellence as the leading printing press in the UAE</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="absolute bottom-[4rem] right-4  flex flex-col justify-center items-center gap-2">
+            <p class="text-[1.7rem] font-medium">350%</p>
+            <p class="text-[0.7rem] text-gray-500 tracking-tight max-w-[100px] leading-4 text-center ">Average annual
+              growth rate among our clents</p>
+          </div>
+
+          <img class="w-[360px]" src="/assets/leftcard-desktop.png" alt="">
+
+        </div>
+        <div class="hidden lg:block">
+          <button
+            class="bg-white/40 hover:bg-white/90 transition-colors absolute z-20 bottom-12 font-medium left-[50%] translate-x-[-50%] h-[40px] w-[140px] rounded-full ">View
+            Projects
+          </button>
+          <!-- <img class="w-[200px]" src="/assets/view.png" alt=""> -->
+          <div class="w-[200px] h-[140px] rounded-3xl bg-red-800 overflow-hidden">
+            <video width="200" height="500" autoplay loop class="translate-y-[-6.5rem]">
+              <source src="/assets/hero-video.mp4" type="video/mp4" />
+              <source src="/assets/hero-video.mp4" type="video/ogg" />
+            </video>
+          </div>
+        </div>
+        <div class=" relative">
+          <div class="absolute w-[130px] bottom-[4.5rem] left-0 flex flex-col justify-center items-center gap-2">
+            <p class="text-[1.7rem] font-medium">60</p>
+            <p class="text-[0.75rem] text-gray-600 tracking-tight text-center leading-4 ">years of <br> establishment
+            </p>
+          </div>
+          <img class="w-[360px]" src="/assets/rightcard-desktop.png" alt="">
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Brands -->
+    <section>
+      <div class="flex items-center justify-center  w-full px-5">
+        <div
+          class=" my-40 brandbox flex flex-col h-[800px] md:h-[400px] w-full rounded-2xl bg-black p-3 md:p-10 md:flex-row gap-10 justify-around">
+          <div class="flex h-full flex-col items-center justify-evenly md:items-start md:justify-around">
+            <p class="text-center md:text-start  max-w-[350px] title font-semibold text-white">
+              Diverse clients, exceptional printing.</p>
+            <p class="text-center md:text-start max-w-[400px] subtitle text-gray-400 leading-5">We offers various
+              services using
+              advanced equipments and techniques to produce high-quality prints for commercial and
+              individual needs</p>
+          </div>
+          <div class="flex flex-col items-center gap-8 md:items-end justify-between">
+            <div class="flex h-[200px] md:w-[400px] w-[320px] ">
+              <!-- card moving animation -->
+              <div class="overflow-hidden">
+                <div class="relative w-[500px] h-[400px] overflow-hidden">
+                  <img src="../assets/logo1.png.png"
+                    class="brand-logo-left absolute translate-x-[200px] top-0 w-[600px] left-0" alt="">
+                  <img src="../assets/logo2.png.png" class="brand-logo-right absolute top-20 left-0 w-[600px]">
+                  <img src="../assets/logo3.png.png"
+                    class="brand-logo-left translate-x-[200px] absolute top-40 left-0 w-[600px]">
+                </div>
+              </div>
+              <!-- -------------- -->
+            </div>
+            <div class="flex h-[40px] w-[140px] items-center justify-center rounded-full accent font-semibold">
+              Contact Us</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="">
+      <img class="w-[90%] mx-auto" src="../assets/services.png" alt="">
+    </section>
+
+    <section class="mt-[100px]">
+      <img class="w-[90%] mx-auto" src="../assets/projects.png" alt="">
+    </section>
+
+    <section class="mt-[100px]">
+      <img class="w-[90%] mx-auto" src="../assets/testimonial.png" alt="">
+    </section>
+
+    <section class="mt-[180px] ">
+      <img class="scale-[1.2] mx-auto" src="../assets/footer.png" alt="">
+    </section>
+    <!-- About -->
+    <!-- Testimonials -->
+    <!-- Footer -->
+  </div>
+
 </body>
+
+<style>
+  /* .btn-shadow{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  } */
+  /* capitalize font-semibold text-[3rem] tracking-tighter; */
+  /* .title{
+    font-weight: semibold;
+    font-size: 3rem;
+    text-transform: capitalize;
+    letter-spacing: 1;
+  } */
+</style>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  let tl = gsap.timeline();
+  let tlRepeat = gsap.timeline({ repeat: -1 });
+
+
+  gsap.fromTo(".hero-up", { opacity: 0, y: 50, duration: .7, }, { opacity: 1, y: 0, duration: .7, stagger: 0.3 });
+
+  tlRepeat.to(".card-arrow", { x: 10, duration: 1, });
+  tlRepeat.to(".card-arrow", { x: 0, duration: 1, });
+
+  tlRepeat.from(".mission-box", { x: 0, duration: 2, });
+  tlRepeat.to(".mission-box", { x: -214, duration: 2, delay: 2 });
+  tlRepeat.to(".mission-box", { x: 0, duration: 2, delay: 2 });
+
+
+  gsap.to(".hero-icons", { opacity: 1, duration: 15, delay: 1, repeat: -1 })
+
+  gsap.to(".brand-logo-left", { x: 0, duration: 15, repeat: -1 })
+  gsap.to(".brand-logo-right", { x: 200, duration: 15, repeat: -1, })
+
+  gsap.to(".brand-box", { x: 200, duration: 15, repeat: -1, })
+  gsap.to(".brand-logo-right", { x: 200, duration: 15, repeat: -1, })
+
+  const tmline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".brandbox",
+      start: "top 70%",
+      end: "top 30%",
+      scrub: 1,
+      markers: true,
+      toggleActions: 'play none none reverse',
+    }
+  });
+  tmline.from(".brandbox", {scale: 0.8, duration: 1 })
+  tmline.to(".brandbox", { scale: 1.1, duration: 3,  })
+
+
+
+  // const tmline = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".brandbox",
+  //     start: "top 70%",
+  //     end: "+=1000",
+  //     scrub: 1,
+  //     pin: true,
+  //     markers: true
+  //   }
+  // });
+  // tmline.to(".box", { yPercent: 350, duration: 1 })
+  // tmline.to(".box", { rotation: 360, duration: 3 })
+
+</script>
 
 <script src="./main.js"></script>
 
