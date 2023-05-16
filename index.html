@@ -99,7 +99,7 @@
           </div>
 
           <div class="absolute bottom-[4rem] right-4  flex flex-col justify-center items-center gap-2">
-            <p class="text-[1.7rem] font-medium">350%</p>
+            <p class="text-[1.7rem] font-semibold">350%</p>
             <p class="text-[0.7rem] text-gray-500 tracking-tight max-w-[100px] leading-4 text-center ">Average annual
               growth rate among our clents</p>
           </div>
@@ -122,7 +122,7 @@
         </div>
         <div class=" relative">
           <div class="absolute w-[130px] bottom-[4.5rem] left-0 flex flex-col justify-center items-center gap-2">
-            <p class="text-[1.7rem] font-medium">60</p>
+            <p class="text-[1.7rem] font-semibold">60</p>
             <p class="text-[0.75rem] text-gray-600 tracking-tight text-center leading-4 ">years of <br> establishment
             </p>
           </div>
@@ -136,7 +136,7 @@
     <section>
       <div class="flex items-center justify-center  w-full px-5">
         <div
-          class=" my-40 brandbox flex flex-col h-[800px] md:h-[400px] w-full rounded-2xl bg-black p-3 md:p-10 md:flex-row gap-10 justify-around">
+          class=" my-[5rem] brandbox flex flex-col h-[800px] md:h-[400px] w-full rounded-2xl bg-black p-3 md:p-10 md:flex-row gap-10 justify-around">
           <div class="flex h-full flex-col items-center justify-evenly md:items-start md:justify-around">
             <p class="text-center md:text-start  max-w-[350px] title font-semibold text-white">
               Diverse clients, exceptional printing.</p>
@@ -168,10 +168,30 @@
 
     <!-- Services -->
     <section class="">
-      <img class="w-[90%] mx-auto" src="../assets/services.png" alt="">
+      <div class="flex flex-col gap-6 my-20">
+        <h1 class="title text-center">Our Amazing<br> Printing Services</h1>
+        <p class="text-md text-center leading-4">We offers various printing services using advanced<br> equipment and
+          techniques
+          to produce high-quality prints for<br> commercial and individual needs.</p>
+      </div>
+      <div class="service-cards-container overflow-hidden">
+        <!-- <img class="w-[90%] mx-auto" src="../assets/services.png" alt=""> -->
+        <div class="service-cards flex gap-4">
+          <img class="w-[260px] mx-auto" src="../assets/card-4.svg" alt="">
+          <img class="w-[260px] mt-40 mx-auto" src="../assets/card-1.svg" alt="">
+          <img class="w-[260px] mx-auto" src="../assets/card-2.svg" alt="">
+          <img class="w-[260px] mt-40" src="../assets/card-3.svg" alt="">
+          <img class="w-[260px] mx-auto" src="../assets/card-1.svg" alt="">
+          <img class="w-[260px] mt-40" src="../assets/card-2.svg" alt="">
+          <img class="w-[260px] mx-auto" src="../assets/card-4.svg" alt="">
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="mt-[100px]">
+    <!-- projects -->
+    <section class="mt-[200px]">
       <img class="w-[90%] mx-auto" src="../assets/projects.png" alt="">
     </section>
 
@@ -228,8 +248,6 @@
   gsap.to(".brand-logo-right", { x: 200, duration: 15, repeat: -1, })
   gsap.to(".brand-box", { x: 200, duration: 15, repeat: -1, })
 
-
-
   const tmline = gsap.timeline({
     scrollTrigger: {
       trigger: ".brandbox",
@@ -240,23 +258,34 @@
       toggleActions: 'play none none reverse',
     }
   });
-  tmline.from(".brandbox", {scale: 0.8, duration: 1 })
-  tmline.to(".brandbox", { scale: 1.1, duration: 3,  })
+  tmline.from(".brandbox", { scale: 0.8, duration: 1 })
+  tmline.to(".brandbox", { scale: 1.1, duration: 3, })
 
 
+// const serviceTl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".service-cards",
+//       start: "top 40%",
+//       end: "bottom 60%",
+//       scrub: 1,
+//       markers: true,
+//       toggleActions: 'play none none reverse',
+//     }
+//   });
+//   serviceTl.from(".brandbox", { x:0, duration: 1 })
+//   serviceTl.to(".brandbox", { x:100, duration: 3, })
 
-  // const tmline = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".brandbox",
-  //     start: "top 70%",
-  //     end: "+=1000",
-  //     scrub: 1,
-  //     pin: true,
-  //     markers: true
-  //   }
-  // });
-  // tmline.to(".box", { yPercent: 350, duration: 1 })
-  // tmline.to(".box", { rotation: 360, duration: 3 })
+  gsap.to(".service-cards", {
+    x:-900,
+    duration: 4,
+    scrollTrigger:{
+      trigger: ".service-cards",
+      start: "top 40%",
+      end: "bottom 55%",
+      scrub: 1,
+      markers: true,
+    }
+  })
 
 </script>
 
