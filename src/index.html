@@ -211,6 +211,9 @@
 
   gsap.fromTo(".hero-up", { opacity: 0, y: 50, duration: .7, }, { opacity: 1, y: 0, duration: .7, stagger: 0.3 });
 
+  gsap.fromTo("header", { opacity: 0, y: -20, duration: .7, }, { opacity: 1, y: 0, duration: .7 });
+
+
   tlRepeat.to(".card-arrow", { x: 10, duration: 1, });
   tlRepeat.to(".card-arrow", { x: 0, duration: 1, });
 
@@ -218,14 +221,14 @@
   tlRepeat.to(".mission-box", { x: -214, duration: 2, delay: 2 });
   tlRepeat.to(".mission-box", { x: 0, duration: 2, delay: 2 });
 
-
-  gsap.to(".hero-icons", { opacity: 1, duration: 15, delay: 1, repeat: -1 })
+  gsap.to(".hero-icons", { opacity: 1, duration: 2, delay: 1, })
 
   gsap.to(".brand-logo-left", { x: 0, duration: 15, repeat: -1 })
   gsap.to(".brand-logo-right", { x: 200, duration: 15, repeat: -1, })
-
-  gsap.to(".brand-box", { x: 200, duration: 15, repeat: -1, })
   gsap.to(".brand-logo-right", { x: 200, duration: 15, repeat: -1, })
+  gsap.to(".brand-box", { x: 200, duration: 15, repeat: -1, })
+
+
 
   const tmline = gsap.timeline({
     scrollTrigger: {
